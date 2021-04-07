@@ -29,6 +29,9 @@ docker-compose-override:
 
 install: cp-env docker-compose-override up
 
+yarn:
+	@docker-compose run --rm --no-deps node yarn
+
 yarn-generate:
 	@docker-compose run --rm node yarn generate
 
