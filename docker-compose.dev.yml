@@ -17,7 +17,7 @@ services:
       traefik.frontend.rule: 'Host: ${DOMAIN}'
     networks:
       - web
-    command: sh -c 'yarn dev'
+    command: sh -c 'yarn && yarn dev'
     restart: ${RESTART}
 
 networks:
