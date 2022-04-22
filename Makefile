@@ -7,7 +7,7 @@ up:
 	@docker-compose up -d --remove-orphans --force-recreate --build
 
 down:
-	@docker-compoes down
+	@docker-compose down
 
 down-v:
 	@docker-compose down -v
