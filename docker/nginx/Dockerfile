@@ -18,4 +18,4 @@ RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["pm2", "logs", "0"]
+CMD ["nginx", "-g", "daemon off;"]
