@@ -17,25 +17,25 @@ services:
     networks:
       - web
 
-  node:
-    build:
-      context: docker/node
-    working_dir: /home/node/app
-    logging:
-      options:
-        max-size: '10m'
-        max-file: '3'
-    environment:
-      HOST: 0.0.0.0
-      PORT: 3000
-    expose:
-      - 3000
-    volumes:
-      - ./:/home/node/app
-    networks:
-      - web
-    command: sh -c 'yarn && yarn dev'
-    restart: ${RESTART}
+  # node:
+  #   build:
+  #     context: docker/node
+  #   working_dir: /home/node/app
+  #   logging:
+  #     options:
+  #       max-size: '10m'
+  #       max-file: '3'
+  #   environment:
+  #     HOST: 0.0.0.0
+  #     PORT: 3000
+  #   expose:
+  #     - 3000
+  #   volumes:
+  #     - ./:/home/node/app
+  #   networks:
+  #     - web
+  #   command: sh -c 'yarn && yarn dev'
+  #   restart: ${RESTART}
 
 networks:
   web:
