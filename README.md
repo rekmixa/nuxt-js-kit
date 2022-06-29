@@ -2,38 +2,41 @@
 
 > Nuxt JS Kit
 
-## Installation
+## Установка
 
 ```bash
 make cp-env
 ```
 
-##### After you must configure your app in .env file
+##### Далее меняем .env
 
 ```bash
 make install
 ```
 
-View docker container logs
+Смотрим логи контейнера nginx:
 
 ```bash
 make logs
 ```
 
-## Build Setup
+Смотрим логи сборки:
+
+```bash
+make logs-pm2
+```
+
+## Запуск + Логи сборки
 
 ```bash
 make
 ```
 
-### Building for production
+### Сборка для продакшна
 
-To building for production you need to change `COMPOSE_FILE` param in *.env* to *docker-compose.prod.yml* and follow the above steps
+Меняем следующие переменные в .env  
 
-## Generate dist and export it to zip-file
-
-```bash
-make generate-zip
 ```
-
-##### For creating zip archieves you need to install *zip* dependency
+COMPOSE_FILEdocker-compose.prod.yml
+PM2_COMMAND_ARGS=start
+```
